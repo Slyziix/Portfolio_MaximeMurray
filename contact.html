@@ -59,7 +59,7 @@
                     </div>
                 </div>
 
-                <form action="envoyer_email.php" class="contact-form">
+                <form id="monFormulaire" class="contact-form">
                     <div class="form-group form-group-name">
                       <label for="name" class="sr-only">Objet</label>
                       <input type="text" name="name" id="name" class="form-control" placeholder="NAME">
@@ -72,7 +72,7 @@
                         <label for="message" class="sr-only">Message</label>
                         <textarea name="message" id="message" class="form-control" placeholder="MESSAGE" rows="5"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary form-submit-btn">Envoyer le message</button>
+                    <button type="button" onclick="submitToGoogleForms(formData)">Envoyer le message</button>
                 </form>
 
             </section>
