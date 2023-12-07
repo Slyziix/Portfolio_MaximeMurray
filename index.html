@@ -13,7 +13,9 @@
 </head>
 
 <body>
-    <button id="downloadPdfBtn" class="btn btn-primary">Télécharger en PDF</button>
+    <div>
+	    <a href="ressources/CV_MaximeMurray.pdf" download="Maxime_Murray_CV.pdf" target="_blank" class="btn btn-primary btn-download-cv">Télécharger le CV</a>
+    </div>
     <header>
         <nav class="collapsible-nav" id="collapsible-nav">
             <a href="index.html" class="nav-link active">ACCUEIL</a>
@@ -216,26 +218,6 @@
     <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
     <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/live-resume.js"></script>
-    
-    <script>
-        document.getElementById('downloadPdfBtn').addEventListener('click', function () {
-            console.log('Button clicked'); // Vérifiez si le bouton est cliqué
-
-            var element = document.querySelector('.contenu-principale');
-            var pdf = new jsPDF({
-                format: 'a4'
-            });
-
-            console.log('PDF instance created'); // Vérifiez si l'instance de PDF est créée
-
-            pdf.fromHTML(element, {
-                callback: function (pdf) {
-                    pdf.save('CV_Maxime_Murray.pdf');
-                    console.log('PDF saved'); // Vérifiez si le PDF est sauvegardé
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
