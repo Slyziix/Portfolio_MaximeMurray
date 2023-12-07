@@ -15,8 +15,9 @@ function submitToGoogleForms(formData) {
 
 // Exemple d'utilisation
 const formData = {
-    'entry.1234567890': 'Valeur du champ 1',  // Remplacez 'entry.1234567890' par le nom de votre premier champ
-    'entry.9876543210': 'Valeur du champ 2'   // Remplacez 'entry.9876543210' par le nom de votre deuxième champ, etc.
+    'Nom': 'Valeur du champ 1',  // Remplacez 'entry.1234567890' par le nom de votre premier champ
+    'Email': 'Valeur du champ 2',   // Remplacez 'entry.9876543210' par le nom de votre deuxième champ, etc.
+    'Sujet': 'Valeur du champ 3'
     // Ajoutez d'autres champs selon votre formulaire
 };
 submitToGoogleForms(formData);
