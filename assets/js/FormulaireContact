@@ -1,0 +1,22 @@
+const formId = '1d9lyGJFUejLIOcdQHyGR-TPJwkE4gZZX5oU5S6lPLdo';
+const submitUrl = `https://docs.google.com/forms/d/e/${formId}/formResponse`;
+
+function submitToGoogleForms(formData) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', submitUrl, true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+
+    // Construire la chaîne de requête avec les données du formulaire
+    const params = new URLSearchParams(formData).toString();
+
+    // Envoyer la requête
+    xhr.send(params);
+}
+
+// Exemple d'utilisation
+const formData = {
+    'entry.1234567890': 'Valeur du champ 1',  // Remplacez 'entry.1234567890' par le nom de votre premier champ
+    'entry.9876543210': 'Valeur du champ 2'   // Remplacez 'entry.9876543210' par le nom de votre deuxième champ, etc.
+    // Ajoutez d'autres champs selon votre formulaire
+};
+submitToGoogleForms(formData);
