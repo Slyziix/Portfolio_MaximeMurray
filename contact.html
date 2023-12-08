@@ -76,7 +76,7 @@
                         <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
                     </div>
             
-                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                    <button type="button" onclick="openMailClient()">Ouvrir le client de messagerie</button>
                 </form>
 
             </section>
@@ -94,6 +94,20 @@
     <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/vendors/entry/jq.entry.min.js"></script>
     <script src="assets/js/live-resume.js"></script>
+    <script>
+        function openMailClient() {
+            // Récupérez les valeurs des champs du formulaire
+            var subject = document.getElementById("subject").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+    
+            // Construisez le lien `mailto:` avec les paramètres appropriés
+            var mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(message);
+    
+            // Ouvrez le client de messagerie par défaut
+            window.location.href = mailtoLink;
+        }
+    </script>
 </body>
 
 </html>
