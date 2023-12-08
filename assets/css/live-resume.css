@@ -7889,14 +7889,46 @@ main {
         background-color: rgba(0, 0, 0, 0.42);
         color: #ffffff; }
       main .portfolio-wrapper .portfolio-item-title {
-        font-size: 10px;
+        font-size: 13px;
         font-weight: 700;
         line-height: 1;
         margin-bottom: 5px; }
       main .portfolio-wrapper .portfolio-item-description {
-        font-size: 10px;
+        font-size: 13px;
         line-height: 1;
         margin-bottom: 0; }
+      .portfolio-item-details.overlay {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+      .portfolio-item-footer {
+        margin-top: auto;
+        font-size: 14px; }
+      .portfolio-item-footer a {
+        color: #007bff; 
+        text-decoration: none;
+        transition: color 0.3s ease; }
+      .portfolio-item-footer a:hover {
+        color: #0056b3; }
+      .projects-coming-soon {
+        margin-top: 50px;
+        text-align: center; 
+        font-size: 28px; 
+        animation: colorChange 5s infinite; }
+@keyframes colorChange {
+  0% { color: rgb(255, 0, 0); /* Rouge */ }
+  10% { color: rgb(255, 128, 0); /* Rouge orangé */ }
+  20% { color: rgb(255, 165, 0); /* Orange */ }
+  30% { color: rgb(255, 223, 0); /* Jaune orangé */ }
+  40% { color: rgb(255, 255, 0); /* Jaune */ }
+  50% { color: rgb(192, 255, 0); /* Jaune verdâtre */ }
+  60% { color: rgb(0, 128, 0); /* Vert */ }
+  70% { color: rgb(0, 255, 0); /* Vert clair */ }
+  80% { color: rgb(0, 0, 255); /* Bleu */ }
+  90% { color: rgb(128, 0, 255); /* Violet */ }
+  100% { color: rgb(255, 0, 255); /* Magenta */ }
+}
+  
   main .blog-section {
     margin-bottom: 51px; }
   main .blog-posts-wrapper {
@@ -8020,8 +8052,7 @@ main {
     width: 100%;
     transform: rotate3d(1, 0, 0, 90deg);
     background-color: rgba(0, 0, 0, 0.42);
-    color: #ffffff;
-    pointer-events: none; }
+    color: #ffffff; }
   .hover-box.in-up .overlay {
     transform-origin: 50% 0%;
     -webkit-animation: in-up 300ms ease 0ms 1 forwards;
