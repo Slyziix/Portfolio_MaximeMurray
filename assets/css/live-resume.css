@@ -7914,20 +7914,7 @@ main {
         margin-top: 50px;
         text-align: center; 
         font-size: 28px; 
-        animation: colorChange 5s infinite; }
-@keyframes colorChange {
-  0% { color: rgb(255, 0, 0); /* Rouge */ }
-  10% { color: rgb(255, 128, 0); /* Rouge orangé */ }
-  20% { color: rgb(255, 165, 0); /* Orange */ }
-  30% { color: rgb(255, 223, 0); /* Jaune orangé */ }
-  40% { color: rgb(255, 255, 0); /* Jaune */ }
-  50% { color: rgb(192, 255, 0); /* Jaune verdâtre */ }
-  60% { color: rgb(0, 128, 0); /* Vert */ }
-  70% { color: rgb(0, 255, 0); /* Vert clair */ }
-  80% { color: rgb(0, 0, 255); /* Bleu */ }
-  90% { color: rgb(128, 0, 255); /* Violet */ }
-  100% { color: rgb(255, 0, 255); /* Magenta */ }
-}
+        color: #070707; }
   
   main .blog-section {
     margin-bottom: 51px; }
